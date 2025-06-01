@@ -29,12 +29,12 @@ class Project(models.Model):
         help='Analytic account associated with this project'
     )
 
-    project_field_ids = fields.One2many(
-        'project.res.partner.fields',
-        'project_id',
-        string='Project Partner Fields',
-        copy=False
-    )
+    # project_field_ids = fields.One2many(
+    #     'project.res.partner.fields',
+    #     'project_id',
+    #     string='Project Partner Fields',
+    #     copy=False
+    # )
 
     sale_id = fields.Many2one(
         'sale.order',
@@ -215,7 +215,7 @@ class Project(models.Model):
 
     date_start = fields.Date(
         string='Start Date',
-        compute='_compute_date_start',
+        # compute='_compute_date_start',
         store=True
     )
 
