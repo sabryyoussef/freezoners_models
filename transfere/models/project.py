@@ -96,17 +96,17 @@ class Project(models.Model):
         string='Project Documents'
     )
 
-    # document_type_ids = fields.One2many(
-    #     'task.document.lines',
-    #     'project_id',
-    #     string='Document Types'
-    # )
+    document_type_ids = fields.One2many(
+        'task.document.lines',
+        'project_id',
+        string='Document Types'
+    )
 
-    # document_required_type_ids = fields.One2many(
-    #     'task.document.required.lines',
-    #     'project_id',
-    #     string='Required Document Types'
-    # )
+    document_required_type_ids = fields.One2many(
+        'task.document.required.lines',
+        'project_id',
+        string='Required Document Types'
+    )
 
     document_request_ids = fields.One2many(
         'documents.request_wizard',
@@ -215,7 +215,7 @@ class Project(models.Model):
 
     date_start = fields.Date(
         string='Start Date',
-        # compute='_compute_date_start',
+        compute='_compute_date_start',
         store=True
     )
 
